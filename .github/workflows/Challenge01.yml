@@ -7,7 +7,7 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v3.2.0
         - name: Display date
-          run: date "%d/%m/%Y"
+          run: date "+%d/%m/%Y"
     job02:
         runs-on: windows-latest
         steps:
@@ -21,7 +21,7 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v3.2.0
         - name: Display date
-          run: date "%d/%m/%Y"
+          run: date "+%d/%m/%Y"
     job04:
         needs: [job01, job02, job03]
         runs-on: ubuntu-latest
@@ -29,4 +29,4 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v3.2.0
         - name: Display date
-          run: date "%d/%m/%Y"
+          run: date "+%d/%m/%Y"
